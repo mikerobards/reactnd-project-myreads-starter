@@ -33,10 +33,11 @@ placeShelf = (book, shelf) => {
 
     return (
       <div className="app">
-        <MainPage
+        {/*<MainPage
           books={this.state.books}
           placeShelf={this.placeShelf}
-        />
+        />*/}
+        <SearchPage />
       </div>
     )
 
