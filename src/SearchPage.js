@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
+import * as BooksAPI from './BooksAPI';
+
+import Book from './Book'
 
 
 class SearchPage extends Component {
   state = {
-    query: ''
+    query: '',
+    searchBooks: []
   }
 
 updateQuery = (query) => {
@@ -12,7 +16,19 @@ updateQuery = (query) => {
   })
 }
 
+getSearchBooks = () => {
+  BooksAPI.search(query).then((searchBooks) => {
+    this.setState({ searchBooks })
+  })
+}
+
   render () {
+    if (this.state.query) {
+
+    } else {
+      this.setState ({ searchBooks })
+    }
+
     return (
 
     <div className="search-books">
@@ -30,7 +46,16 @@ updateQuery = (query) => {
         </div>
       </div>
       <div className="search-books-results">
-        <ol className="books-grid"></ol>
+        <ol className="books-grid">
+          {this.state.searchBooks.map(searchBook => (
+            <li key={searchBook.id}>
+              <Book
+                book={searchBook}
+              />
+            </li>
+          ))}
+
+        </ol>
       </div>
     </div>
     );
