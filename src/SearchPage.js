@@ -20,16 +20,18 @@ updateQuery = (query) => {
 updateSearchBooks = (query) => {
   if(query){
     BooksAPI.search(query).then((searchBooks) => {
-      this.setState({ searchBooks })
+      if (searchBooks.error) {
+        this.setState({ searchBooks: [] });
+      } else {
+        this.setState({ searchBooks: searchBooks });
+      }
     })
   } else {
     this.setState({ searchBooks: [] });
   }
-
 }
 
   render () {
-
     return (
       <div className="search-books">
         <div className="search-books-bar">
