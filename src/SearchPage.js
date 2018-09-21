@@ -53,6 +53,7 @@ updateSearchBooks = (query) => {
               <li key={searchBook.id}>
                 <Book
                   book={searchBook}
+                  placeShelf={this.props.placeShelf}
                 />
               </li>
             ))}
