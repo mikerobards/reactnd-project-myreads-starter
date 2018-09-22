@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Book from './Book';
 
-
-
 class MainPage extends Component {
   render () {
     return (
@@ -44,7 +42,6 @@ class MainPage extends Component {
                     </li>
                   ))
                 }
-
                   </ol>
                 </div>
               </div>
@@ -62,7 +59,6 @@ class MainPage extends Component {
                     </li>
                   ))
                 }
-
                   </ol>
                 </div>
               </div>

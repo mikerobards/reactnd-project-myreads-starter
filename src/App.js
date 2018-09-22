@@ -10,7 +10,6 @@ class BooksApp extends React.Component {
     books: []
   }
 
-
 componentDidMount() {
   BooksAPI.getAll().then((books) => {
     this.setState({ books })
@@ -25,25 +24,25 @@ placeShelf = (book, shelf) => {
   });
 }
 
-  render() {
-    console.log(this.state.books);
+render() {
+  console.log(this.state.books);
 
-    return (
-      <div className="app">
-      <Route exact path="/" render={() => (
-        <MainPage
-          books={this.state.books}
-          placeShelf={this.placeShelf}
-        />
-      )} />
-      <Route path="/search" render={() => (
-        <SearchPage
-          placeShelf={this.placeShelf}
-        />
-      )} />
-      </div>
-    )
-  }
+  return (
+    <div className="app">
+    <Route exact path="/" render={() => (
+      <MainPage
+        books={this.state.books}
+        placeShelf={this.placeShelf}
+      />
+    )} />
+    <Route path="/search" render={() => (
+      <SearchPage
+        placeShelf={this.placeShelf}
+      />
+    )} />
+    </div>
+  )
+}
 }
 
-export default BooksApp
+export default BooksApp;
