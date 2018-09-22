@@ -12,7 +12,7 @@ To start the development server, enter `npm start`.
 
 # Instructions
 
-You will see three shelves: `Currently Reading`, `Want to Read`, and `Read`.
+You will see three shelves: **Currently Reading**, **Want to Read**, and **Read**.
 To move a book, simply click on the arrow button, then choose the shelf you want to move the book to.
 
 To search, click on the `+` button at the bottom right of the screen. Then, enter the title or author of the book. Select the book by clicking on the arrow button on the book, and selecting the shelf you desire.
