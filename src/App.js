@@ -37,6 +37,7 @@ render() {
     )} />
     <Route path="/search" render={() => (
       <SearchPage
+        books={this.state.books}
         placeShelf={this.placeShelf}
       />
     )} />
